@@ -29,7 +29,7 @@ void usage (void)
 char complement[] = {
    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
-   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
+   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, '-',   0,   0, 
    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
    0, 'T',   0, 'G',   0,   0,   0, 'C',   0,   0,   0,   0,   0,   0, 'N',   0,
    0,   0,   0,   0, 'A',   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
@@ -98,6 +98,8 @@ int main (int argc, char *argv[])
   if (argc < 1) usage () ;
 
   // open the files
+	
+  dna2textConv['-'] = '-' ; // allow gap characters in sequences
   
   SeqIO *si = seqIOopenRead (*argv, dna2textConv, false) ;
   if (!si) die ("failed to open input sequence file %s", *argv) ;
