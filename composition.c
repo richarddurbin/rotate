@@ -27,6 +27,7 @@ void usage (void)
   fprintf (stderr, "    -q : show quality counts\n") ;
   fprintf (stderr, "    -t : show time and memory used\n") ;
   fprintf (stderr, "    -l : show length distribution in up to %d quadratic bins\n", lengthBins) ;
+  exit (-1) ;
 }
 
 int main (int argc, char *argv[])
