@@ -28,7 +28,7 @@ seqio.o: seqio.c seqio.h
 ### programs
 
 composition: composition.c seqio.o $(UTILS_OBJS)
-	$(CC) $(CFLAGS) $^ -o $@ -lz
+	$(CC) $(CFLAGS) $^ -o $@ -lz -lm
 
 rotate: rotate.c seqio.o $(UTILS_OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ -lz
