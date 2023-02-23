@@ -9,7 +9,7 @@ To run:
 ```
 ./rotate
 rotate [options] <input fasta filename>
-  -x <pos>              position to become new start [0]
+  -x <pos>          position to become new start [0]
   -rc               reverse complement after rotating [false]
   -s <string>       rotate to start of search string
   -m <n_mismatch>   maximum number of mismatches allowed in search [0]
@@ -35,3 +35,6 @@ TCTACGGAAGG
 >4
 TCTACGGAAGG
 ```
+
+# composition
+You also get for free a handy utility to inspect a (optionally gzipped) fasta file and return the number of sequences and their lengths.
