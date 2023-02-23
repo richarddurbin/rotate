@@ -100,14 +100,14 @@ char *fgetword (FILE *f)
   return buf ;
 }
 
-#define WITH_ZLIB
-#ifdef WITH_ZLIB
+// #define WITH_GZOPEN
+#ifdef WITH_GZOPEN
 #include <zlib.h>
 #endif
 
 FILE *fzopen(const char *path, const char *mode)
 {  /* very cool from https://stackoverflow.com/users/3306211/fernando-mut */
-#ifdef WITH_ZLIB
+#ifdef WITH_GZOPEN
   gzFile zfp;			/* fernando said *zfp - makes me worry.... */
 
   /* try gzopen */
