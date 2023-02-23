@@ -95,7 +95,7 @@ int main (int argc, char *argv[])
       { outFileName = argv[1] ;
       	argc -= 2 ; argv += 2 ;
       }
-  if (argc < 1) usage () ;
+    else usage() ;
 
   // open the files
 	
