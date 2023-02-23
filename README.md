@@ -37,4 +37,31 @@ TCTACGGAAGG
 ```
 
 # composition
-You also get for free a handy utility to inspect a (optionally gzipped) fasta file and return the number of sequences and their lengths.
+You also get for free a handy utility to inspect a (optionally gzipped) fasta or fastq file and return the number of sequences and their lengths, with optional additional information.
+
+```
+./composition
+Usage: composition [opts] <filename>
+  will read fasta, fastq, optionally gzipped.  Use filename '-' for stdin.
+  options:
+    -b : show base counts
+    -q : show quality counts
+    -t : show time and memory used
+    -l : show length distribution in up to 20 quadratic bins
+    
+./composition test.fa 
+fasta file, 4 sequences >= 0, 45 total, 11.25 average, 11 min, 12 max
+
+./composition -b -t -l test.fa
+fasta file, 4 sequences >= 0, 45 total, 11.25 average, 11 min, 12 max
+bases
+  A 11 24.4 %
+  C 12 26.7 %
+  G 12 26.7 %
+  T 10 22.2 %
+approximate N50 11
+length distribution (quadratic bins)
+  10    3
+  11    1
+user    0.000028        system  0.000097        max_RSS 114688  memory  16902632
+```
