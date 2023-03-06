@@ -1,3 +1,5 @@
+## Rotate: A command-line program to rotate circular DNA sequences to start at a given position or string
+
 # Summary
 
 Some DNA sequences, such as most viral, bacterial and organelle genomes,
