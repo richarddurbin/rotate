@@ -1,6 +1,10 @@
 ---
 title: 'Rotate: A command-line program to rotate circular DNA sequences to start at a given position or string'
-
+tags:
+  - dna sequence
+  - rotation
+  - circular genome
+  - organelle
 authors:
   - name: Richard Durbin
     orcid: 0000-0002-9130-1006
@@ -15,7 +19,7 @@ affiliations:
  - name: Department of Genetics, University of Cambridge
    index: 1
 date: 06 March 2023
-bibliography: references.bib
+bibliography: paper.bib
 ---
 
 # Summary
