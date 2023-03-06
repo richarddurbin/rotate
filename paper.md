@@ -1,6 +1,6 @@
-## Rotate: A command-line program to rotate circular DNA sequences to start at a given position or string
+# Rotate: A command-line program to rotate circular DNA sequences to start at a given position or string
 
-# Summary
+## Summary
 
 Some DNA sequences, such as most viral, bacterial and organelle genomes,
 are circular as opposed to linear. When these sequences are deposited
@@ -29,7 +29,7 @@ target sequence, allowing for mismatches, and return the locations
 instead. It has no external dependencies. It is available at
 <https://github.com/richarddurbin/rotate>.
 
-# Statement of need
+## Statement of need
 
 Multiple programs or software packages already exist with similar
 functionality, but have various restrictions on input, extensive
@@ -54,7 +54,7 @@ to compile, and we tested its functionality on macOS 12.5.1 and on
 Scientific Linux 7.9. Lastly, it is already being used in scientific
 publications (e.g. ).
 
-# Example
+## Example
 
 Here we give an example of how to use rotate in combination with a
 multiple sequence alignment program of choice to rotate a large dataset
