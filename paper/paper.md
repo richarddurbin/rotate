@@ -33,7 +33,7 @@ However, most multiple sequence alignment programs (e.g. MAFFT [@Katoh2013],
 MUSCLE [@Edgar2004]) assume linearity of sequences, including the same starting 
 position. Performing accurate downstream analyses, then, requires first 
 standardizing both their starting position. 
-Rotate is a command-line program written in C that takes as input an (optionally
+`Rotate` is a command-line program written in C that takes as input an (optionally
 gzipped) FASTA file of DNA sequences and either a new starting position (offset 
 in bp) or anchor string which uniquely defines a new starting position, and 
 outputs a FASTA file with the same sequences appropriately rotated. If a string 
@@ -41,7 +41,7 @@ is given as input, it can allow for any number of mismatches up to a
 user-defined threshold, and will also search for and output reverse complements 
 when necessary. The program will fail if the specified input string is not 
 unique in a target sequence, allowing for mismatches, and return the locations 
-instead. Rotate has no external dependencies. It is available at 
+instead. `Rotate` has no external dependencies. It is available at 
 <https://github.com/richarddurbin/rotate>.
 
 # Statement of need
@@ -62,15 +62,15 @@ allow for a user-specified string or position. Though this optimal rotation is
 desirable in many contexts, the ability to rotate to a user-defined sequence or 
 position is highly valuable, for example because it allows for the iterative 
 inclusion of new sequences without re-running the algorithm on the entire 
-dataset. Rotate is extremely fast and has no dependencies, and its runtime 
+dataset. `Rotate` is extremely fast and has no dependencies, and its runtime 
 scales linearly with the number of input sequences, since every sequence is 
-processed separately. Rotate is easy to compile, and we tested its functionality
-on macOS 12.5.1 and on Scientific Linux 7.9. Lastly, it is already being used in
+processed separately. It is easy to compile, and we tested its functionality
+on macOS 12.5.1 and on Scientific Linux 7.9. Lastly, `Rotate` is already being used in
 scientific publications (e.g. [@Kjr2022]).
 
 # Example
 
-Here we give an example of how to use Rotate in combination with a multiple 
+Here we give an example of how to use `Rotate` in combination with a multiple 
 sequence alignment program of choice to rotate a large dataset of sequences to 
 any common start position. We downloaded two sets of publicly available 
 organelle assemblies from NCBI's RefSeq database: (1) all available complete 
@@ -79,7 +79,7 @@ chloroplast genomes of the Rosaceae family (n=465). For the mammalian
 mitochondria, we selected a conserved mitochondrial sequence (using the 100 
 Vertebrate Cons track in the UCSC Genome Browser [@Kent2002]) as the anchor 
 string, while for the chloroplasts we used a common barcode primer 
-[@Taberlet2007]. We first rotated the sequences with Rotate, specifying the 
+[@Taberlet2007]. We first rotated the sequences with `Rotate`, specifying the 
 anchor string (-s) and maximum number of mismatches (-m), respectively. 
 Execution of this first step on a Linux machine using a single CPU with 6GB RAM
 took 3.165 and 3.422 seconds to rotate 1,546 mitochondrial and 465 chloroplast 
