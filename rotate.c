@@ -5,7 +5,7 @@
  * Description:
  * Exported functions:
  * HISTORY:
- * Last edited: May 18 22:53 2021 (rd109)
+ * Last edited: Jun  9 21:58 2023 (rd109)
  * Created: Mon May 17 16:13:20 2021 (rd109)
  *-------------------------------------------------------------------
  */
@@ -73,6 +73,7 @@ int main (int argc, char *argv[])
   // read the command line
   
   --argc ; ++argv ;		/* swallows the command name */
+  if (!argc) usage() ;
   while (argc > 1)
     if (!strcmp (*argv, "-x") && argc > 2)
       { startPos = atoi (argv[1]) ;
