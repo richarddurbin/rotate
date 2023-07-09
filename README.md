@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/664302121.svg)](https://zenodo.org/badge/latestdoi/664302121)
+
 # rotate
 simple program to rotate a circular sequence to start at a given position or string
 
